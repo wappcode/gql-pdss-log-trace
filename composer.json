@@ -1,0 +1,19 @@
+{
+    "name": "wappcode/gql-pdss-log-trace",
+    "version": "1.0.0",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "GPDLogTrace\\": "GPDLogTrace/src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AppModule\\": "dev/modules/AppModule/src/"
+        }
+    },
+    "require": {
+        "wappcode/gqlpdss": "^2.0"
+    },
+    "require-dev": {}
+}
