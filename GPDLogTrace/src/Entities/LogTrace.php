@@ -10,7 +10,7 @@ use GraphQL\Doctrine\Annotation as API;
 
 /**
  * @ORM\Entity
- * @ORM\Table("log_trace",indexes={
+ * @ORM\Table("gpd_log_trace",indexes={
  * @ORM\Index(name="resource_key_idx",columns={"resource_key"}),
  * @ORM\Index(name="action_key_idx",columns={"action_key"}),
  * @ORM\Index(name="referenceid_idx",columns={"reference_id"}),
@@ -19,7 +19,6 @@ use GraphQL\Doctrine\Annotation as API;
  * @ORM\Index(name="created_idx",columns={"created"}),
  * })
  *
- * @author J.Jesus Abarca <goabargm@gmail.com>
  */
 class LogTrace extends AbstractEntityModel
 {
