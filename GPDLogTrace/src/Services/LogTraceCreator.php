@@ -23,7 +23,7 @@ class LogTraceCreator
         $userId = $info->getUserId() ?? null;
         $userFullName = $info->getUserName() ?? null;
         $ip = IPClientService::get();
-        $inputString = json_encode($input) ?? null;
+        $inputValue = is_array($input) ? $input : null;
         $entity = new LogTrace();
         $entity
             ->setResource($info->getResource())
@@ -32,7 +32,7 @@ class LogTraceCreator
             ->setReferenceLabel($info->getReferenceLabel())
             ->setSourceIP($ip)
             ->setUser($userId)
-            ->setInput($inputString)
+            ->setInput($inputValue)
             ->setUserFullName($userFullName);
         $entityManger->persist($entity);
         $entityManger->flush();
