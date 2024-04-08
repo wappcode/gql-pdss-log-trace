@@ -3,7 +3,7 @@
 
 rm -f /var/www/html/composer.lock;
 cp /home/commands/doctrine.local.php /var/www/html/dev/config/
-chmod -R a+w /var/www/html/data;
+chmod -R a+w /var/www/html/dev/data;
 php /home/commands/init-database.php;
 cd /var/www/html;
 composer install --no-interaction
